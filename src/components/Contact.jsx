@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 const Section = styled.section`
   display: flex;
@@ -99,17 +100,85 @@ const IconLink = styled.a`
 `;
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_pava9kc",
+        "template_1hey98m",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "QwtSb1oAZhL_b-JN0"
+      )
+      .then(
+        (response) => {
+          setStatus("Message was sent!");
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+          console.log("Success:", response);
+        },
+        (error) => {
+          setStatus("Failed to send message, please try again.");
+          console.error("Error:", error.text);
+        }
+      );
+  };
+
   return (
     <Section id="contact">
       <ContentWrapper>
         <FormContainer>
           <h2>Let's talk!</h2>
-          <form>
-            <input type="text" placeholder="Your name" required />
-            <input type="email" placeholder="Your email" required />
-            <textarea placeholder="Your message" required rows="5"></textarea>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your message"
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+              rows="5"
+            ></textarea>
             <button type="submit">Send</button>
           </form>
+          {status && <p>{status}</p>}
         </FormContainer>
 
         <SocialContainer>
