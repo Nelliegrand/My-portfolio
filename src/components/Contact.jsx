@@ -59,6 +59,7 @@ const FormContainer = styled.div`
       width: 200px;
       cursor: pointer;
       font-size: 1rem;
+      font-weight: bold;
       align-self: center;
       transition: background-color 0.3s;
       &:hover {
@@ -116,14 +117,14 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .send(
-        "service_pava9kc", 
-        "template_1hey98m", 
+        "service_pava9kc",
+        "template_1hey98m",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "QwtSb1oAZhL_b-JN0" 
+        "QwtSb1oAZhL_b-JN0"
       )
       .then(
         (response) => {

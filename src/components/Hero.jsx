@@ -9,14 +9,16 @@ const HeroSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 `;
 
 const HeroTitle = styled.h1`
-  font-size: 4rem;
+  margin-top: 12rem;
+  font-size: 3.2rem;
   font-family: "Chakra Petch", sans-serif;
+
   margin-bottom: 1rem;
 `;
 
@@ -24,7 +26,7 @@ const HeroTagline = styled.p`
   font-family: "Chakra Petch", sans-serif;
   font-size: 14px;
   margin-top: 0;
-  margin-bottom: 1.5rem; /* Lägger till mellanrum under tagline */
+  margin-bottom: 1.5rem;
 `;
 
 export default function Hero() {

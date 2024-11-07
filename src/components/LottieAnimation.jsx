@@ -10,7 +10,7 @@ const LottieBackground = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: "https://lottie.host/62385efb-17e7-4c92-8196-269ddb9cb1f3/cTwI0oS68a.json", // Din JSON-länk
+      path: "https://lottie.host/62385efb-17e7-4c92-8196-269ddb9cb1f3/cTwI0oS68a.json",
     });
 
     return () => Lottie.destroy();

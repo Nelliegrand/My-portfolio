@@ -44,11 +44,21 @@ const SkillCard = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-  color: #00d9ff;
+  color: white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 
   & > svg {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover > svg {
+    transform: scale(1.2);
   }
 `;
 

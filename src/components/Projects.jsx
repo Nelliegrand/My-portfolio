@@ -14,7 +14,7 @@ const Section = styled.section`
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #00d9ff;
+  color: white;
   margin-bottom: 4rem;
   text-align: center;
 `;
@@ -51,7 +51,7 @@ const ContentContainer = styled.div`
 
   h2 {
     font-size: 1.5rem;
-    color: #00d9ff;
+    color: white;
     margin-bottom: 1rem;
   }
 

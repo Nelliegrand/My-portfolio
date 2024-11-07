@@ -11,7 +11,8 @@ const NavbarContainer = styled.nav`
   padding: 1rem;
   color: #ffffff;
   font-family: "Chakra Petch", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
+  margin-top: 9rem;
 
   @media (max-width: 768px) {
     font-size: 10px;

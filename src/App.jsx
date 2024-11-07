@@ -5,7 +5,8 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import LottieBackground from "./components/LottieAnimation"; // Importera din komponent
+import LottieBackground from "./components/LottieAnimation";
+import ScrollToTopButton from "./components/ToTopButton";
 
 const AppContainer = styled.div`
   position: relative;
@@ -21,6 +22,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
+      <ScrollToTopButton />
     </AppContainer>
   );
 }
