@@ -7,22 +7,19 @@ const Button = styled.div`
   bottom: 30px;
   right: 30px;
   width: 50px;
-  display: ${({ show }) => (show ? "flex" : "none")};
+  display: ${({ $show }) => ($show ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  
   color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
   font-size: 24px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-  }
 `;
 
-const Text = styled.span`
+const Label = styled.span`
   margin-top: 5px;
   font-size: 12px;
   font-family: "Chakra Petch", sans-serif;
@@ -51,9 +48,9 @@ export default function ScrollToTopButton() {
   };
 
   return (
-    <Button show={showButton} onClick={scrollToTop}>
+    <Button $show={showButton} onClick={scrollToTop}>
       <FaArrowUp />
-      <Text>TOP</Text>
+      <Label>TOP</Label>
     </Button>
   );
 }
