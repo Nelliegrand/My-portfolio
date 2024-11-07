@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 
 const Section = styled.section`
   display: flex;
@@ -17,7 +17,7 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
   max-width: 900px;
-  gap: 12rem;
+  gap: 15rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -105,43 +105,34 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+  const [sentMessage, setSentMessage] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .send(
-        "service_pava9kc",
-        "template_1hey98m",
+        "service_pava9kc", 
+        "template_1hey98m", 
         {
-          name: formData.name,
-          email: formData.email,
+          from_name: formData.name,
+          from_email: formData.email,
           message: formData.message,
         },
-        "QwtSb1oAZhL_b-JN0"
+        "QwtSb1oAZhL_b-JN0" 
       )
       .then(
         (response) => {
-          setStatus("Message was sent!");
-          setFormData({
-            name: "",
-            email: "",
-            message: "",
-          });
-          console.log("Success:", response);
+          console.log("SUCCESS!", response.status, response.text);
+          setSentMessage("Message was sent!");
         },
         (error) => {
-          setStatus("Failed to send message, please try again.");
-          console.error("Error:", error.text);
+          console.error("FAILED...", error);
+          setSentMessage("Failed to send the message. Try again.");
         }
       );
   };
@@ -157,7 +148,7 @@ const Contact = () => {
               name="name"
               placeholder="Your name"
               value={formData.name}
-              onChange={handleInputChange}
+              onChange={handleChange}
               required
             />
             <input
@@ -165,20 +156,20 @@ const Contact = () => {
               name="email"
               placeholder="Your email"
               value={formData.email}
-              onChange={handleInputChange}
+              onChange={handleChange}
               required
             />
             <textarea
               name="message"
               placeholder="Your message"
               value={formData.message}
-              onChange={handleInputChange}
-              required
+              onChange={handleChange}
               rows="5"
+              required
             ></textarea>
             <button type="submit">Send</button>
           </form>
-          {status && <p>{status}</p>}
+          {sentMessage && <p>{sentMessage}</p>}
         </FormContainer>
 
         <SocialContainer>

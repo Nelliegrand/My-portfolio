@@ -21,7 +21,7 @@ const Section = styled.section`
 
 const Content = styled.div`
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
   padding-right: 1.5rem;
 
   h2 {

@@ -21,6 +21,7 @@ const Section = styled.section`
   font-size: 1.4rem;
   padding: 2rem;
   color: #fff;
+  margin-top: 7rem;
 `;
 
 const SkillsContainer = styled.div`

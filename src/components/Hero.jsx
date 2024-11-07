@@ -24,6 +24,7 @@ const HeroTagline = styled.p`
   font-family: "Chakra Petch", sans-serif;
   font-size: 14px;
   margin-top: 0;
+  margin-bottom: 1.5rem; /* Lägger till mellanrum under tagline */
 `;
 
 export default function Hero() {
@@ -36,7 +37,7 @@ export default function Hero() {
         FRONTEND DEVELOPER
       </HeroTitle>
       <HeroTagline>
-        Creating engaging, responsive web experiences that combines creativity
+        Creating engaging, responsive web experiences that combine creativity
         with functionality.
       </HeroTagline>
       <Navbar />

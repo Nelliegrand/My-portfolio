@@ -5,17 +5,17 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import cubeImage from "./assets/cube.jpg";
+import LottieBackground from "./components/LottieAnimation"; // Importera din komponent
 
 const AppContainer = styled.div`
-  background: url(${cubeImage}) no-repeat center center fixed;
-  background-size: cover;
+  position: relative;
   color: #ffffff;
 `;
 
 function App() {
   return (
     <AppContainer>
+      <LottieBackground />
       <Hero />
       <About />
       <Skills />
