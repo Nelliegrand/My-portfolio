@@ -14,13 +14,13 @@ const NavbarContainer = styled.nav`
   margin-top: 9rem;
 
   @media (max-width: 768px) {
-    font-size: 10px;
+    font-size: 20px;
   }
 
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
-    font-size: 8px;
+    font-size: 15px;
     position: static;
     padding: 1rem;
   }

@@ -21,6 +21,7 @@ const HeroTitle = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
+    text-align: center;
   }
 `;
 
@@ -30,6 +31,7 @@ const HeroTagline = styled.p`
 
   @media (max-width: 768px) {
     font-size: 12px;
+    text-align: center;
   }
 `;
 

@@ -27,15 +27,19 @@ const ProjectContainer = styled.div`
   flex-direction: row;
   padding: 2rem;
   border-radius: 8px;
+  justify-content: center; /* Centrerar innehållet horisontellt */
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1rem; // ensure space between image and content
+    gap: 1rem; // säkerställer mellanrum mellan bild och innehåll
+    padding: 1rem; // Minskar padding på mindre skärmar
+    text-align: center; // Centrerar texten i mobilvy
   }
 `;
 
 const ImageContainer = styled.div`
   flex: 1;
+  max-width: 400px; /* Begränsar bildens bredd på mindre skärmar */
 
   img {
     width: 100%;
@@ -63,7 +67,7 @@ const ContentContainer = styled.div`
   }
 
   a {
-    align-self: start;
+    align-self: center; /* Centrerar knappen i mobilvy */
     padding: 0.5rem 1rem;
     background-color: #00d9ff;
     color: #fff;
@@ -75,6 +79,11 @@ const ContentContainer = styled.div`
     &:hover {
       background-color: #0099cc;
     }
+  }
+
+  @media (max-width: 768px) {
+    align-items: center; /* Centrerar innehållet på mobilskärm */
+    padding: 0 1rem; /* Lägger till lite padding för bättre läsbarhet */
   }
 `;
 

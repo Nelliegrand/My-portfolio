@@ -19,7 +19,8 @@ const Button = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    width: 40px;
+    width: 20px;
+    height: 20px;
     bottom: 20px;
     right: 20px;
   }

@@ -29,7 +29,7 @@ const SkillsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 `;
 
 const Row = styled.div`

@@ -15,6 +15,7 @@ const Section = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   align-items: flex-start;
+  justify-content: space-between; /* För större skärmar */
   width: 100%;
   max-width: 900px;
   gap: 15rem;
@@ -22,7 +23,9 @@ const ContentWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -30,43 +33,52 @@ const FormContainer = styled.div`
   flex: 1;
   text-align: center;
   margin-left: 80px;
+  max-width: 400px;
 
   h2 {
     font-size: 2rem;
     color: white;
   }
+
   form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center; /* Centrera knappen och fälten */
+  }
 
-    input,
-    textarea {
-      font-family: "Chakra Petch", sans-serif;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      width: 100%; // changed
-    }
+  input,
+  textarea {
+    font-family: "Chakra Petch", sans-serif;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
 
-    button {
-      font-family: "Chakra Petch", sans-serif;
-      padding: 0.5rem;
-      background-color: #00d9ff;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      width: 200px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-      align-self: center;
-      transition: background-color 0.3s;
-      &:hover {
-        background-color: #0099cc;
-      }
+  button {
+    font-family: "Chakra Petch", sans-serif;
+    padding: 0.5rem;
+    background-color: #00d9ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center; /* Gör knappen centrerad */
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #0099cc;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    max-width: 100%;
   }
 `;
 
@@ -75,6 +87,7 @@ const SocialContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
+  max-width: 400px;
 
   h2 {
     font-size: 2rem;
