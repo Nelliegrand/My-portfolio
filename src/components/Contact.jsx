@@ -15,7 +15,7 @@ const Section = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; /* För större skärmar */
+  justify-content: space-between;
   width: 100%;
   max-width: 900px;
   gap: 15rem;
@@ -44,7 +44,7 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center; /* Centrera knappen och fälten */
+    align-items: center;
   }
 
   input,
@@ -69,11 +69,17 @@ const FormContainer = styled.div`
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    align-self: center; /* Gör knappen centrerad */
+    align-self: center;
     transition: background-color 0.3s;
     &:hover {
       background-color: #0099cc;
     }
+  }
+
+  p {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
