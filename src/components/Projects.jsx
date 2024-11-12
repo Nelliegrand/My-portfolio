@@ -30,6 +30,7 @@ const ProjectContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 1rem; // ensure space between image and content
   }
 `;
 

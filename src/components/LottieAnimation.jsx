@@ -1,5 +1,6 @@
 import Lottie from "lottie-web";
 import { useEffect, useRef } from "react";
+import animationData from "../assets/Lottie2.json";
 
 const LottieBackground = () => {
   const container = useRef(null);
@@ -10,7 +11,10 @@ const LottieBackground = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: "https://lottie.host/62385efb-17e7-4c92-8196-269ddb9cb1f3/cTwI0oS68a.json",
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
     });
 
     return () => Lottie.destroy();
@@ -18,7 +22,6 @@ const LottieBackground = () => {
 
   return (
     <div
-      ref={container}
       style={{
         position: "fixed",
         top: 0,
@@ -26,11 +29,17 @@ const LottieBackground = () => {
         width: "100vw",
         height: "100vh",
         zIndex: -1,
-        transform: "scale(1.5)",
-        transformOrigin: "center",
-        objectFit: "cover",
+        overflow: "hidden",
       }}
-    />
+    >
+      <div
+        ref={container}
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      />
+    </div>
   );
 };
 

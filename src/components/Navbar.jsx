@@ -6,7 +6,6 @@ const NavbarContainer = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-around;
-
   bottom: 20px;
   padding: 1rem;
   color: #ffffff;

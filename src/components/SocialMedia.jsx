@@ -10,6 +10,11 @@ const SocialLinksContainer = styled.div`
   justify-content: space-between;
   padding: 0 20px;
   font-family: "Chakra Petch", sans-serif;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 1rem;
+  }
 `;
 
 const IconLink = styled.a`

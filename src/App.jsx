@@ -8,14 +8,15 @@ import Contact from "./components/Contact";
 import LottieBackground from "./components/LottieAnimation";
 import ScrollToTopButton from "./components/ToTopButton";
 
-const AppContainer = styled.div`
+/* const AppContainer = styled.div`
   position: relative;
   color: #ffffff;
-`;
+`; */
 
 function App() {
   return (
-    <AppContainer>
+    /* <AppContainer> */
+    <div>
       <LottieBackground />
       <Hero />
       <About />
@@ -23,7 +24,8 @@ function App() {
       <Projects />
       <Contact />
       <ScrollToTopButton />
-    </AppContainer>
+    </div>
+    /*  </AppContainer> */
   );
 }
 

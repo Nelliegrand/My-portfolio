@@ -33,6 +33,7 @@ const FormContainer = styled.div`
 
   h2 {
     font-size: 2rem;
+    color: white;
   }
   form {
     display: flex;
@@ -46,7 +47,7 @@ const FormContainer = styled.div`
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 1rem;
-      width: 350px;
+      width: 100%; // changed
     }
 
     button {
@@ -77,6 +78,7 @@ const SocialContainer = styled.div`
 
   h2 {
     font-size: 2rem;
+    color: white;
   }
 `;
 

@@ -17,6 +17,12 @@ const Button = styled.div`
   font-size: 24px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    width: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
 `;
 
 const Label = styled.span`

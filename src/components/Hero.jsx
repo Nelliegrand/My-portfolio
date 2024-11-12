@@ -19,14 +19,18 @@ const HeroTitle = styled.h1`
   font-size: 3.2rem;
   font-family: "Chakra Petch", sans-serif;
 
-  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const HeroTagline = styled.p`
   font-family: "Chakra Petch", sans-serif;
   font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export default function Hero() {

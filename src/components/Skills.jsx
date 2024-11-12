@@ -57,6 +57,10 @@ const SkillCard = styled.div`
     transition: transform 0.3s ease;
   }
 
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
   &:hover > svg {
     transform: scale(1.2);
   }

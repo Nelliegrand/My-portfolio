@@ -7,11 +7,10 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  padding: 2rem;
   font-size: 18px;
   font-family: "Chakra Petch", sans-serif;
   color: white;
-  padding: 2rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
