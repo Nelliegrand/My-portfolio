@@ -151,6 +151,7 @@ const Contact = () => {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setSentMessage("Message was sent!");
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.error("FAILED...", error);
