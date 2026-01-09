@@ -5,13 +5,13 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import LottieBackground from "./components/LottieAnimation";
+import SquaresBackground from "./components/SquaresBackground";
 import ScrollToTopButton from "./components/ToTopButton";
 
 function App() {
   return (
     <div>
-      <LottieBackground />
+      <SquaresBackground />
       <Hero />
       <About />
       <Skills />
